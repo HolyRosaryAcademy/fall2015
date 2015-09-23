@@ -23,4 +23,4 @@
 
 3- Use the handout on Arrays from the homework, and we'll build a quick display of images using Live Weave and the images you selected above.
 
-4- If we have time, we'll complete a couple of activitys on Arrays and Loops at [Code Academy](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/2/1?curriculum_id=502d635ceda910000200293b#!/exercises/0)
+4- If we have time, we'll complete a couple of activities on Arrays and Loops at [Code Academy](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/2/1?curriculum_id=502d635ceda910000200293b#!/exercises/0)
