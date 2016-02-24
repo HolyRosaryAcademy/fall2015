@@ -3,7 +3,7 @@
 
 ## As I know some of you are interested in creating VIDEO GAMES, today I thought we'd take a look at a new resource from the BBC, the Dr. Who Game Creator.
 
-1- to go [Dr. Who Game Maker](www.bbc.co.uk/programmes/articles/26Y2fJtHFZ2wWp397SHttGM/doctor-who-game-maker) and click on the "Make Games" button on the left
+1- to go [Dr. Who Game Maker](http://www.bbc.co.uk/programmes/articles/26Y2fJtHFZ2wWp397SHttGM/doctor-who-game-maker) and click on the "Make Games" button on the left
 
 2- click on the "how to make a simple game" blue button on the lower left
 
