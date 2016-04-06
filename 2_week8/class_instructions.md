@@ -28,6 +28,6 @@ I have some definite ideas of what sources and questions each group should look 
 
 1- what websites and/or experts can help us in our search? Are there experts we can contact via email or phone who might share their data with us? What exact data would we request?
 
-2- once we have some data about our topic, need else do we need to accomplish our task? For example, to convert from bitmap to vector - how could we do that? To search for hidden codes, is their a body of research we can already parse, or do we have to create our own data? For creating an SVG parser, would we help write code, or use something commercially available? 
+2- once we have some data about our topic, what else do we need to accomplish our task? For example, to convert from bitmap to vector - how could we do that? To search for hidden codes, is their a body of research we can already parse, or do we have to create our own data? For creating an SVG parser, would we help write code, or use something commercially available? 
 
 This should get us started for the day!
