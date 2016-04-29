@@ -58,7 +58,9 @@ function parseBinaryArray() {
  
    if (index == (binaryArray.length-1)) {
     console.log('our final array is '+array2);
-    console.save(array2)
+    var result = JSON.stringify(array2.join(''))
+    result = result.replace(/"/g, '');
+    console.save(result)
    }
  });
 
