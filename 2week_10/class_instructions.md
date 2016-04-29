@@ -9,7 +9,8 @@
 
 4- Do you see any words? Bible references? Numbers that could have meaning?
 
-5- Repeat the process above, adjusting line number 16 in the shroud_algos.js file
-      url: 'https://raw.githubusercontent.com/HolyRosaryAcademy/fall2015/master/2_week9/txts/1.txt',
-			
-### Adjust the 1.txt at the end to 2.txt, then 3.txt, etc - until you reach the final file, 20.txt.
+5- Repeat the process above, adjusting the fileNumber variable on line number 11 in the shroud_algos.js file
+
+    var fileNumber = '1';
+	
+### Adjust the '1' to '2', then '3', etc - until you reach the final file, '20'.

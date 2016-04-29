@@ -8,12 +8,12 @@ var binaryArray = [];
 var array2 = [];
 var searchTerms =  ['heaven', 'resurrection', 'jesus'];
 var bibleNotation = ['1.3', '23.1', '14.8'];
-
+var fileNumber = '4';
 
 // here we use a call to get the text file which has the code behind the image file in a text format
 
 $.ajax({
-  url: 'https://raw.githubusercontent.com/HolyRosaryAcademy/fall2015/master/2_week9/txts/1.txt',
+  url: 'https://raw.githubusercontent.com/HolyRosaryAcademy/fall2015/master/2_week9/txts/'+fileNumber+'.txt',
   type: 'GET',
   dataType: 'text',
    success: function (res) {
@@ -60,7 +60,7 @@ function parseBinaryArray() {
     console.log('our final array is '+array2);
     var result = JSON.stringify(array2.join(''))
     result = result.replace(/"/g, '');
-    console.save(result)
+    console.save(result, 'shroud_binary_'+fileNumber+'.txt')
    }
  });
 
