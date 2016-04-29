@@ -2,7 +2,10 @@
 <html>
 <head>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js"></script>
 
+<link rel="stylesheet" href="style.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -11,5 +14,19 @@
 <body>
 <script src="consolesave.js"></script>
 <script src="shroud_algos.js"></script>
+<div class="bs-docs-header">
+Shroud Algorithms Project - Extracting 1s and 0s from JPEG Binary Code
+</div>
+<div class="container">
+
+<div class="row">
+ <div class="col-md-6">
+<button class="btn btns center-block btn-warning" id="btn1">Run individual Shroud file</button>
+</div>
+  <div class="col-md-6">
+<button class="btn btns center-block btn-primary" id="btn2">Loop to run ALL Shroud files</button>
+</div>
+</div>
+</div>
 </body>
 </html>
