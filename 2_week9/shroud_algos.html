@@ -1,9 +1,16 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js"></script>
 
+<script src="https://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="codeblock.js"></script>
+
+<link rel="stylesheet" href="codeblock.css"> 
 <link rel="stylesheet" href="style.css"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
@@ -22,10 +29,116 @@ Shroud Algorithms Project - Extracting 1s and 0s from JPEG Binary Code
 <div class="row">
  <div class="col-md-6">
 <button class="btn btns center-block btn-warning" id="btn1">Run individual Shroud file</button>
+
+
 </div>
   <div class="col-md-6">
 <button class="btn btns center-block btn-primary" id="btn2">Loop to run ALL Shroud files</button>
 </div>
+</div>
+
+<div class="row">
+
+<div class="col-md-12">
+<div id="codeblock1" class="codeblock">
+// we'll store our Shroud data in the binaryRawData variable
+
+var binaryRawData = '';
+var binaryArray = [];
+var array2 = [];
+var fileNumber = '1';
+var fileNumberArray = _.range([start=1], 20, [step=1]);
+
+// this call grabs our text file from the variable fileNumber, and puts that data into our apps memory via the binaryRawData variable
+
+function runFile(file) {
+  $.ajax({
+      url: 'https://raw.githubusercontent.com/HolyRosaryAcademy/fall2015/master/2_week9/txts/'+file+'.txt',
+      type: 'GET',
+      dataType: 'text',
+      success: function (res) { 
+           binaryRawData = res;    
+
+//this data is just an unformatted piece of text (a string), so now we take this data and create an array of words or digit groups with it 
+
+          createBinaryArray(file);
+      },
+      error: function () {
+         console.log('sorry, could not get your Shroud text');
+      }
+  });
+}; // end runFile() function
+
+function createBinaryArray(file) {
+
+// we have to split up the text into groups using a space to identify the next group
+
+   binaryArray =  binaryRawData.split(" ");
+
+// now we LOOP through our groups to check for the values we're looking for   
+
+   parseBinaryArray(file);
+}
+
+function parseBinaryArray(file) {
+
+// start looping through our array of groups
+
+ $.each(binaryArray, function(index, value){
+
+// this conditional statement tells our app to look for ONLY the following values. This is the section you can play with to see if you get a different result!
+
+  if (value == '00' || value == '01' || value == '10' || value =='11') {
+    array2.push(value);
+  }
+ 
+// this piece tells our app to output a .txt file if we are on the last loop. If our binaryArray has 200 entries, it's actually number 199 we'll be targeting because 0 is also included as a number in the array.
+
+   if (index == (binaryArray.length-1)) {
+
+// we have to format our text in order to run it through the 0s and 1s translator, so we remove spaces and get rid of the " quotes before saving the file.
+
+    var result = JSON.stringify(array2.join(''))
+    result = result.replace(/"/g, '');
+    saveFile(result, 'shroud_binary_'+file+'.txt')
+
+    // display this result in our console window
+
+    console.log(result);
+   }
+ });
+}
+
+function saveFile(data,filename) {
+
+// this is a piece of code I grabbed from the internet, just saves a text file for you
+
+  if(typeof data === "object"){
+      data = JSON.stringify(data, undefined, 4)
+  }
+
+  var blob = new Blob([data], {type: 'text/json'}),
+      e    = document.createEvent('MouseEvents'),
+      a    = document.createElement('a')
+
+  a.download = filename
+  a.href = window.URL.createObjectURL(blob)
+  a.dataset.downloadurl =  ['text/json', a.download, a.href].join(':')
+  e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
+  a.dispatchEvent(e)
+}
+// here is the function that will begin when you hit the run button:
+
+runFile(fileNumber);
+</div>
+</div>
+
+ <div class="col-md-12 bottom">
+<div class="btn btny center-block btn-danger" id="btn2"><a href="javascript:window.open('http://www.unit-conversion.info/texttools/convert-text-to-binary/','binary to text converter','width=1000,height=600')">Open up Binary to Text Translator</a></div>
+</div>
+
+
+
 </div>
 </div>
 </body>

@@ -1,4 +1,4 @@
-// we'll store our Shroud data in this Javascript object first
+// we'll store our Shroud data in the binaryRawData variable
 var binaryRawData = '';
 
 // now we'll set up some arrays we'll need to store and parse our data about the Shroud
@@ -12,6 +12,7 @@ var fileNumber = '1';
 var fileNumberArray = _.range([start=1], 20, [step=1]);
 
 $(document).ready(function($){
+  $("#codeblock1").codeblock();
   // when our document is loaded, add this action to the first button
   $('#btn1').click(function(){
     runFile(fileNumber);

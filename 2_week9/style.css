@@ -1,13 +1,27 @@
+.ace_comment {
+color: #1D9A1D !important;
+}
 .btns {
 	height: 100px;
 }
+.btny {
+	margin: 30px;
+}
+.bottom {
+	margin-bottom:30px;
+}
+a {
+	color: white !important;
+}
 #btn1 {
 	font-size: 2.75rem;
+	margin-bottom: 30px;
 }
 
 #btn2 {
 	font-size: 2.75rem;
 }
+
 
 .bs-docs-header {
     padding-top: 60px;

@@ -1,0 +1,83 @@
+/*Structure*/
+.codeblock-console-run {
+    float: right;
+    padding: 0 10px;
+}
+
+.codeblock-editor-wrapper {
+    position: relative;
+}
+.codeblock-editor { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.codeblock-console-text {
+    display: inline-block;
+    word-break: break-all;
+}
+
+.codeblock-reset {
+    position: absolute;
+    right: 10px;
+    top: -35px;
+    z-index: 1;
+    opacity: .6;
+    cursor: pointer;
+
+    width: 25px;
+    height: 25px;
+    background: url("reset.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.codeblock-reset:hover {
+    opacity: 1;
+}
+
+
+/*Style*/
+.ace_editor {
+    font-size: 1.3em !important;
+}
+
+.codeblock {
+    white-space: pre;
+}
+
+.codeblock-container {
+    border: 1px solid #AAA;
+}
+
+.codeblock-console {
+    border-top: 1px solid #CCC;
+    font-family: monospace;
+
+    padding: 2px 2px 2px 8px;
+    line-height: 28px;
+    min-height: 26px;
+}
+
+.codeblock-console-run {
+    background-color: #51A351;
+    color: #FFF;
+    border-radius: 2px;
+    cursor: pointer;
+        font-size: 4rem;
+    padding: 10px;
+}
+
+.codeblock-console-run.disabled {
+    background-color: #DDD;
+    color: #000;
+    cursor: not-allowed;
+}
+
+.codeblock-console-text.placeholder {
+    color: #666;
+}
+
