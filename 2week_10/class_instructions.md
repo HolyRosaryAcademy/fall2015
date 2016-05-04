@@ -1,7 +1,7 @@
 # Instructions for May 4th, Programming at Holy Rosary Academy, Spring 2016
 
 
-1- Download the materials from last week on the Github website (week2_9) - and save them to a folder on your local hard drive.
+1- Download the shroud_app.zip file and unzip it to a folder on your hard drive. Don't unzip to the desktop - unzip this to a shroud_app or similar folder.
 
 2- Open up the shroud_algos.html file in Chrome. Look through the code to see what is happening, then click on the green "run" button at the bottom right. 
 
